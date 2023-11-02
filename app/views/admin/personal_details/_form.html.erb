@@ -1,0 +1,14 @@
+<%= semantic_form_for [:admin, @personal_detail], builder: ActiveAdmin::FormBuilder do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :phone_number %>
+    <%= f.input :email %>
+    <%= f.input :gender %>
+    <%= f.input :dob %>
+    <%= f.input :blood_group %>
+    <%= f.input :marital_status %>
+    <%= f.input :image, as: :file %>
+    <%= f.input :video, as: :file %>
+  <% end %>
+
+  <%= f.actions %>
+<% end %>

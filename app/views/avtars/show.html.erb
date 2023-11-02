@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @avtar %>
+
+<div>
+  <%= link_to "Edit this avtar", edit_avtar_path(@avtar) %> |
+  <%= link_to "Back to avtars", avtars_path %>
+
+  <%= button_to "Destroy this avtar", @avtar, method: :delete %>
+</div>

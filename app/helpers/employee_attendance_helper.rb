@@ -1,0 +1,2 @@
+module EmployeeAttendanceHelper
+end

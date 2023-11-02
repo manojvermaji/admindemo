@@ -1,0 +1,7 @@
+<!-- app/views/admin/personal_details/_image_form.html.erb -->
+<%= semantic_form_for [:admin, @personal_detail], builder: ActiveAdmin::FormBuilder do |f| %>
+  <%= f.inputs 'Image Details' do %>
+    <%= f.input :image, as: :file, hint: f.object.image.present? ? image_tag(f.object.image.url) : content_tag(:span, 'No image yet') %>
+  <% end %>
+  <%= f.actions %>
+<% end %>

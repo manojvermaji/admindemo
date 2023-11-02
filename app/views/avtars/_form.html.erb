@@ -1,0 +1,17 @@
+<%= form_with(model: avtar) do |form| %>
+  <% if avtar.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(avtar.errors.count, "error") %> prohibited this avtar from being saved:</h2>
+
+      <ul>
+        <% avtar.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

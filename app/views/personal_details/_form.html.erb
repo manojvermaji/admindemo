@@ -1,0 +1,47 @@
+<%= form_with(model: personal_detail) do |form| %>
+  <% if personal_detail.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(personal_detail.errors.count, "error") %> prohibited this personal_detail from being saved:</h2>
+
+      <ul>
+        <% personal_detail.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :phone_number, style: "display: block" %>
+    <%= form.text_field :phone_number %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :gender, style: "display: block" %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div>
+    <%= form.label :dob, style: "display: block" %>
+    <%= form.text_field :dob %>
+  </div>
+
+  <div>
+    <%= form.label :marital_status, style: "display: block" %>
+    <%= form.text_field :marital_status %>
+  </div>
+
+  <div>
+    <%= form.label :blood_group, style: "display: block" %>
+    <%= form.text_field :blood_group %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
